@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1f2e;
+  color: white;
+}
+
+.sidebar-link {
+  @apply flex items-center p-3 mb-2 rounded-lg transition-colors duration-200;
+}
+
+.sidebar-link.active {
+  @apply bg-[#2e3650] text-blue-400;
+}
+
+.sidebar-link:hover:not(.active) {
+  @apply bg-[#2e3650] bg-opacity-50;
+}
